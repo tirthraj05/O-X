@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Index Page for Level Selection -->
+  <div id="indexPage">
+    <h1>Tic Tac Toe</h1>
+    <p>Select a difficulty level to start playing:</p>
+    <button class="level-btn" onclick="startGame('easy')">Easy</button>
+    <button class="level-btn" onclick="startGame('medium')">Medium</button>
+    <button class="level-btn" onclick="startGame('hard')">Hard</button>
+  </div>
+
+  <!-- Game Page -->
+  <div id="gamePage" style="display: none;">
+    <h1>Tic Tac Toe</h1>
+    <p id="levelInfo"></p>
+    <div class="game-board" id="gameBoard"></div>
+    <div class="controls">
+      <button class="control-btn" onclick="resetGame()">Reset Game</button>
+      <button class="control-btn" onclick="returnToMenu()">Main Menu</button>
+    </div>
+  </div>
+
+  <!-- Popup for Congratulations -->
+  <div id="congratsPopup">
+    <div id="popupContent">
+      <p id="winnerMessage"></p>
+      <button class="control-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
